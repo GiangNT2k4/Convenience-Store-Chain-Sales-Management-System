@@ -1,0 +1,28 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+    image: chainstore-backend:local
+    container_name: chainstore-backend
+    restart: unless-stopped
+    ports:
+      - "4313:4313"
+    environment:
+      SERVER_PORT: 4313
+      SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE:-prod}
+      CLIENT_URL: ${CLIENT_URL:-https://chainstore.site}
+      API_URL: ${API_URL:-https://api.chainstore.site}
+      PAYOS_RETURN_URL: ${PAYOS_RETURN_URL:-https://chainstore.site/pos/payment/payos}
+      PAYOS_CANCEL_URL: ${PAYOS_CANCEL_URL:-https://chainstore.site/pos/payment/payos}
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:4313/swagger-ui/index.html"]
+      interval: 30s
+      timeout: 5s
+      start_period: 20s
+      retries: 3

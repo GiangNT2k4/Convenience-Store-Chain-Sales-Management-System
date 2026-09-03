@@ -1,0 +1,11 @@
+target/
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+*.log
+.DS_Store
+# Local secrets directory — never commit credential files
+secrets/*
+!secrets/.gitkeep

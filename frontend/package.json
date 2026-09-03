@@ -1,0 +1,35 @@
+{
+  "name": "chainstore-admin",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test:module-e": "node --test test/moduleE.test.js",
+    "test:module-f": "node --test test/moduleF.test.js",
+    "test:shift-closing": "node --test test/shiftClosing.test.js",
+    "test:pos-receipt": "node --test test/posReceipt.test.js",
+    "preview": "vite preview",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "barcode-detector": "^3.2.1",
+    "jsbarcode": "^3.11.6",
+    "jspdf": "^4.2.1",
+    "qrcode": "^1.5.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.27.0",
+    "recharts": "^2.15.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "tailwindcss": "^4.0.0",
+    "vite": "^5.4.10"
+  }
+}
