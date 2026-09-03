@@ -3,7 +3,7 @@
 Capstone platform for a **one-brand, multi-branch SME retail chain** — from HQ operations and in-store POS to customer loyalty on mobile.
 
 - **Live demo (open this):** https://chainstore.site  
-- **Staff API:** `https://api.chainstore.site/api` — JWT-protected; the root URL in a browser returns **401 Unauthorized** (expected). Use the website, not the raw API.  
+- **Staff API:** `https://api.chainstore.site/api` — JWT-protected.  
 
 ## Role on this project — Nguyen Truong Giang (Business Analyst)
 
